@@ -7,14 +7,14 @@
     <% if candidate_signed_in? %>
     <li class="right"><a href="/moncv">Editer mon CV</a></li>
     <li class="right"><a href="/offres">Voir les offres</a></li>
-    <%= link_to "Se déconnecter", destroy_candidate_session_path, :method => :delete %>
+    <li class="right"><%= link_to "Se déconnecter", destroy_candidate_session_path, :method => :delete %></li>
     <% end %>
     <% if recruiter_signed_in? %>
     <li class="right"><a href="/mesdatas">Mon Data Dashboard</a></li>
     <li class="right"><a href="/newoffer">Créer une offre</a></li>
     <li class="right"><a href="/candidats">Liste des candidats</a></li>
     <li class="right"><a href="/dashboard_suivi">Dashboard de suivi</a></li>
-    <%= link_to "Se déconnecter", destroy_recruiter_session_path, :method => :delete %>
+    <li class="right"><%= link_to "Se déconnecter", destroy_recruiter_session_path, :method => :delete %></li>
     <% end %>
   <% else %>
   <li class="right"><a href="/signin">Se connecter</a></li>
