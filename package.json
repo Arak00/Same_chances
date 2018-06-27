@@ -1,5 +1,11 @@
 {
   "name": "same-chances",
   "private": true,
-  "dependencies": {}
+  "scripts": {
+    "prepush": "rspec --format progress && rubocop"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "husky": "^0.14.3"
+  }
 }
