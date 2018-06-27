@@ -5,11 +5,11 @@ default: &default
 development:
   <<: *default
   database: same-chances_development
-  port: 5432
 test:
   <<: *default
   database:  same-chances_test<%= ENV['TEST_ENV_NUMBER'] %>
   port: 5432
+  host: 127.0.0.1
 production:
   <<: *default
   database: same-chances_prod
