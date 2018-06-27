@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 
 # authentification
@@ -30,7 +32,7 @@ group :development, :test do
   gem 'byebug', '9.0.6', platform: :mri
   gem 'database_cleaner'
   gem 'dotenv-rails'
-  gem "factory_bot_rails"
+  gem 'factory_bot_rails'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'rspec-rails'
@@ -38,8 +40,8 @@ group :development, :test do
 end
 
 group :development do
-  gem "better_errors"
-  gem "binding_of_caller"
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'letter_opener'
   gem 'listen'
   gem 'rubocop', require: false
@@ -50,16 +52,16 @@ end
 
 group :test do
   gem 'capybara'
-  gem "nyan-cat-formatter"
+  gem 'nyan-cat-formatter'
   gem 'poltergeist'
-  gem "rspec_junit_formatter"
+  gem 'rspec_junit_formatter'
   gem 'safe_attributes'
   gem 'shoulda-matchers'
 end
 
 group :production do
   gem 'sentry-raven'
-  gem "skylight"
+  gem 'skylight'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
