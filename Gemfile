@@ -25,7 +25,6 @@ gem 'trestle-search'
 gem 'turbolinks'
 gem 'twitter'
 gem 'uglifier'
-gem 'sqlite3'
 
 group :development, :test do
   gem 'byebug', '9.0.6', platform: :mri
