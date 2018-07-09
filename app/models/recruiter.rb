@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Recruiter < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
