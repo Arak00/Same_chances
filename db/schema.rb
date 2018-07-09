@@ -12,6 +12,28 @@
 
 ActiveRecord::Schema.define(version: 2018_06_26_134408) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "administrators", force: :cascade do |t|
+    t.string "email"
+    t.string "password_digest"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "remember_token"
+    t.datetime "remember_token_expires_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "bot_discords", force: :cascade do |t|
+    t.string "server_name"
+    t.string "server_id"
+    t.string "server_owner"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "candidates", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -29,6 +51,45 @@ ActiveRecord::Schema.define(version: 2018_06_26_134408) do
     t.index ["reset_password_token"], name: "index_candidates_on_reset_password_token", unique: true
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "categories_sources", id: false, force: :cascade do |t|
+    t.bigint "category_id", null: false
+    t.bigint "source_id", null: false
+    t.index ["category_id"], name: "index_categories_sources_on_category_id"
+    t.index ["source_id"], name: "index_categories_sources_on_source_id"
+  end
+
+  create_table "categories_users", id: false, force: :cascade do |t|
+    t.bigint "category_id", null: false
+    t.bigint "user_id", null: false
+    t.index ["category_id"], name: "index_categories_users_on_category_id"
+    t.index ["user_id"], name: "index_categories_users_on_user_id"
+  end
+
+  create_table "channels", force: :cascade do |t|
+    t.string "channel_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "content_types", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "content_types_users", id: false, force: :cascade do |t|
+    t.bigint "content_type_id", null: false
+    t.bigint "user_id", null: false
+    t.index ["content_type_id"], name: "index_content_types_users_on_content_type_id"
+    t.index ["user_id"], name: "index_content_types_users_on_user_id"
+  end
+
   create_table "recruiters", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -44,6 +105,76 @@ ActiveRecord::Schema.define(version: 2018_06_26_134408) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_recruiters_on_email", unique: true
     t.index ["reset_password_token"], name: "index_recruiters_on_reset_password_token", unique: true
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "source_id"
+    t.integer "review"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["source_id"], name: "index_reviews_on_source_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
+
+  create_table "selected_sources", force: :cascade do |t|
+    t.bigint "source_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["source_id"], name: "index_selected_sources_on_source_id"
+  end
+
+  create_table "source_types", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sources", force: :cascade do |t|
+    t.string "title"
+    t.string "url"
+    t.jsonb "infos"
+    t.datetime "published_date"
+    t.datetime "selection"
+    t.integer "rank_selection"
+    t.bigint "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "content_type_id"
+    t.bigint "source_type_id"
+    t.index ["category_id"], name: "index_sources_on_category_id"
+    t.index ["content_type_id"], name: "index_sources_on_content_type_id"
+    t.index ["source_type_id"], name: "index_sources_on_source_type_id"
+  end
+
+  create_table "twitter_handles", force: :cascade do |t|
+    t.string "twitter_handle"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "username"
+    t.string "unsubscribe_token"
+    t.boolean "newsletter", default: false
+    t.string "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
 end
