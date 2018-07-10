@@ -1,6 +1,13 @@
 body {
     margin: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.navBar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
 }
 
 ul.topnav {
@@ -17,13 +24,13 @@ ul.topnav li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 20px 18px;
     text-decoration: none;
 }
 
 ul.topnav li a:hover:not(.active) {background-color: #111;}
 
-ul.topnav li a.active {background-color: #91bbff;}
+ul.topnav li a.active {background-color: #66cdaa;}
 
 ul.topnav li.right {float: right;}
 
