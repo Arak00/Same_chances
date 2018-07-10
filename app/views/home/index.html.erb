@@ -1,2 +1,85 @@
 <h1>Same Chances</h1>
 <p>Bienvenue sur le site de Same Chances</p>
+
+<% if candidate_signed_in? %>
+
+    Il est temps de créer votre CV !
+
+    <%= form_tag do %>
+        <div class="field">
+            <%= label_tag(:q, "Votre genre") %>
+            <%= text_field_tag(:q) %>
+            <p>Cette information ne sera pas mise en avant auprès du recruteur.</p>
+        </div>
+
+        <div class="field">
+            <%= label_tag(:q, "Votre âge") %>
+            <%= text_field_tag(:q) %>
+            <p>Cette information ne sera pas mise en avant auprès du recruteur.</p>
+        </div>
+
+        <div class="field">
+            <%= label_tag(:q, "Votre adresse") %>
+            <%= text_field_tag(:q) %>
+            <p>Cette information ne sera pas mise en avant auprès du recruteur.</p>
+        </div>
+
+        <div class="field">
+            <%= label_tag(:q, "Votre numéro de téléphone") %>
+            <%= text_field_tag(:q) %>
+        </div>
+
+        <div class="field">
+            <%= label_tag(:q, "Vos expériences") %>
+            <%= text_field_tag(:q) %>
+        </div>
+
+        <div class="field">
+            <%= label_tag(:q, "Votre formation") %>
+            <%= text_field_tag(:q) %>
+        </div>
+
+        <div class="actions">
+            <%= submit_tag("Enregistrer") %>
+        </div>
+    <% end %>
+
+<% end %>
+
+
+<% if recruiter_signed_in? %>
+
+    Des infos sur l'entreprise ?
+
+    <%= form_tag do %>
+        <div class="field">
+            <%= label_tag(:q, "Le nom de votre entreprise") %>
+            <%= text_field_tag(:q) %>
+        </div>
+
+        <div class="field">
+            <%= label_tag(:q, "Description de votre entreprise") %>
+            <%= text_field_tag(:q) %>
+        </div>
+
+        <div class="field">
+            <%= label_tag(:q, "L'adresse de votre entreprise") %>
+            <%= text_field_tag(:q) %>
+        </div>
+
+        <div class="field">
+            <%= label_tag(:q, "Combien comptez-vous de femmes dans votre entreprise ?") %>
+            <%= text_field_tag(:q) %>
+        </div>
+
+        <div class="field">
+            <%= label_tag(:q, "Combien comptez-vous d'hommes dans votre entreprise ?") %>
+            <%= text_field_tag(:q) %>
+        </div>
+
+        <div class="actions">
+            <%= submit_tag("Enregistrer") %>
+        </div>
+    <% end %>
+
+<% end %>
