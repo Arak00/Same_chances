@@ -23,4 +23,3 @@ Metrics/BlockLength:
     - 'Guardfile'
     - 'vendor/bundle'
     - 'app/admin/auth/administrators_admin.rb'
-
