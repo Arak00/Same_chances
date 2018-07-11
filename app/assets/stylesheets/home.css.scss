@@ -28,6 +28,14 @@
     background-color: #f8ac4e;
 }
 
+.buttonOrange {
+    background-color: #f8ac4e;
+}
+
+.buttons .buttonOrange:hover {
+    background-color: grey;
+}
+
 .container {
     margin: 20px 60px;
     padding: 30px;
@@ -112,6 +120,7 @@
     margin: 20px;
     
 }
+
 .sectionTwo {
     /* Height and width fallback for older browsers. */
     height: 100%;
