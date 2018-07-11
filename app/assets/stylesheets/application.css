@@ -15,10 +15,10 @@
  */
 
  html {
-    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
  }
 
- h1, h2, h3, h4 {
-    margin: 0;
+ a {
+     text-decoration: none;
+     color: #333;
  }

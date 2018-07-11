@@ -2,12 +2,11 @@
   <ul class="topnav">
     <li><a class="active" href="/">Same chances</a></li>
     <li><a href="/blog">Blog</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#about">A propos</a></li>
+    <li><a href="/about">A propos</a></li>
     <% if candidate_signed_in? || recruiter_signed_in? %>
       <% if candidate_signed_in? %>
-      <li class="right"><a href="/moncv">Editer mon CV</a></li>
-      <li class="right"><a href="/offres">Voir les offres</a></li>
+      <li class="right"><%= link_to "Editer mon CV", editermoncv_path %></li>
+      <li class="right"><%= link_to "Voir les offres", offers_path %></li>
       <li class="right"><%= link_to "Se déconnecter", destroy_candidate_session_path, :method => :delete %></li>
       <% end %>
       <% if recruiter_signed_in? %>
