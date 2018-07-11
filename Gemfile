@@ -41,6 +41,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'letter_opener'
   gem 'listen'
+  gem 'rails_real_favicon'
   gem 'rubocop', require: false
   gem 'spring'
   gem 'spring-watcher-listen'

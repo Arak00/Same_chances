@@ -257,6 +257,11 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.4)
       loofah (~> 2.2, >= 2.2.2)
+    rails_real_favicon (0.0.11)
+      json (>= 1.7, < 3)
+      rails (>= 3.1)
+      rest-client (~> 2.0)
+      rubyzip (~> 1)
     railties (5.2.0)
       actionpack (= 5.2.0)
       activesupport (= 5.2.0)
@@ -314,6 +319,7 @@ GEM
     ruby-progressbar (1.9.0)
     ruby_dep (1.5.0)
     ruby_http_client (3.3.0)
+    rubyzip (1.2.1)
     safe_attributes (1.0.10)
       activerecord (>= 3.0.0)
     sass (3.5.6)
@@ -436,6 +442,7 @@ DEPENDENCIES
   pry-rails
   puma
   rails
+  rails_real_favicon
   rspec-rails
   rspec_junit_formatter
   rubocop
