@@ -71,7 +71,17 @@
     margin: auto;
 }
 
-.infos {
+.infosSecondSection {
+    display: flex;
+    justify-content: space-between;
+}
+
+.charts {
+    display: flex;
+    flex-direction: column;
+}
+
+.infosCandidate {
     display: flex;
 }
 

@@ -10,6 +10,7 @@ AllCops:
     - 'config/environments/*.rb'
     - 'bin/*'
     - 'db/migrate/20180611142731_add_confirmable_to_devise.rb'
+    - 'config/initializers/web_app_manifest.rb'
 
 Rails:
   Enabled: True
@@ -23,3 +24,4 @@ Metrics/BlockLength:
     - 'Guardfile'
     - 'vendor/bundle'
     - 'app/admin/auth/administrators_admin.rb'
+
