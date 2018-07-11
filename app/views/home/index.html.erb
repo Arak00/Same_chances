@@ -1,6 +1,8 @@
 <header class="headerHome">
     <div class="contentTopSection">
         <div class="title titleb">
+            <h1 id="brand"><%= image_tag("samechances1.png", alt: "logo")%></h1>
+            </br>
             <h1>Same Chances est une plateforme </br> qui met en relation des candidats ayant la possibilité de </br> créer des CVs neutres
             avec des recruteurs. </br></br> Ici pas de biais de recrutement !</h1>
         </div>
@@ -57,30 +59,26 @@
         <h2 class="title">A propos de nous</h2>
         <div class="profiles">
             <div class="profile">
-                <%= image_tag("alex.jpeg", :alt => "alexandre cartier", :class => "profile") %>
-                <p>CEO de Same Chances, adore le foot et la cuisine italienne.</p>
+                <%= image_tag("alex.jpeg", :alt => "alexandre cartier", :class => "profilePicture") %>
+                <p>CEO de Same Chances, féministe avant tout. Il adore le foot et la cuisine italienne.</p>
             </div>
             <div class="profile">
-                <%= image_tag("aude.png", :alt => "aude cervantes", :class => "profile") %>
-                <p>CMO, aime parler de sujets philosophiques et a un attrait particulier pour le plat flageolets/oeufs.</p>
+                <%= image_tag("aude.png", :alt => "aude cervantes", :class => "profilePicture") %>
+                <p>CMO, aime parler de sujets philosophiques et a un attrait particulier pour le plat flageolets/oeuf.</p>
             </div>
             <div class="profile">
-                <%= image_tag("alexandra.jpeg", :alt => "alexandra de la gueronnière", :class => "profile") %>
+                <%= image_tag("alexandra.jpeg", :alt => "alexandra de la gueronnière", :class => "profilePicture") %>
                 <p>CTO, adore débattre et n'a pas peur d'affirmer haut et fort ses convictions, elle aime aussi tous les êtres vivants.</p>
             </div>
         </div>
-        <p>Infos</p>
+        <div class="pitch">
+            <p>“Same Chances veut donner les moyens à des candidats d'être recruter pour leurs compétences et leurs compétences uniquement.</p>
+            <p>Tandis qu'une entreprise trouvera l'opportunité de peut-être rencontrer une perle rare qu'elle n'aurait pas eu par les moyens classiques.”</p> 
+            <p>Ce projet vous parle à vous aussi ? 
+            </br><strong>Alors venez participer à l'aventure Same Chances avec nous !</strong></p>
+        </div>
     </div>
 </section>
-<footer>
-    <p>© 2018 Same Chances</p>
-    <ul>
-        <li>Termes</li>
-        <li>Blog</li>
-        <li>A propos</li>
-        <li>Contact</li>
-    </ul>
-</footer>
 
 <% if candidate_signed_in? %>
 

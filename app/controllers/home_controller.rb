@@ -6,4 +6,12 @@ class HomeController < ApplicationController
   def signup; end
 
   def signin; end
+
+  def about; end
+
+  def contact; end
+
+  def offers; end
+
+  def editcv; end
 end
