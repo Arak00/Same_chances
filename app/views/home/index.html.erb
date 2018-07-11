@@ -1,45 +1,69 @@
 <header class="headerHome">
-    <div class="contentFirstSection">
-        <div class="title">
+    <div class="contentTopSection">
+        <div class="title titleb">
             <h1>Same Chances est une plateforme </br> qui met en relation des candidats ayant la possibilité de </br> créer des CVs neutres
             avec des recruteurs. </br></br> Ici pas de biais de recrutement !</h1>
         </div>
 
         <div class="buttons">
-            <button class="buttonHome">En savoir plus pour les recruteurs</button>
-            <button class="buttonHome">En savoir plus pour les candidats</button>
+            <a href="#section1"><button class="buttonHome">En savoir plus pour les recruteurs</button></a>
+            <a href="#section2"><button class="buttonHome">En savoir plus pour les candidats</button></a>
         </div>
     </div>
 </header>
-<section class="sectionOne">
-    <div class="contentSecondSection">
+<section class="sectionOne" id="section1">
+    <div class="contentSection">
         <h2 class="title">Vous êtes recruteur ?</h2>
         <div class="infosSecondSection">
-            <div class="infosRecruiter">
-                <h3>Infos</h3>
+            <div class="infosRecruiter container">
+                <h3 class="title">Infos</h3>
                 <p>Vous souhaitez recruter les meilleurs et voulait éviter les biais de jugement lors de vos futurs recrutements ?
                 Same Chances vous permet d'analyser votre démographie en entreprise et de recruter vos futurs talents sur la base de critères purement objectifs.
                 L'avantage ? Garder que les meilleurs éléments sur la base des compétences.</p>
             </div>
-            <div class="charts">
-                <h3>Graphes</h3>
+            <div class="charts container">
+                <h3 class="title">Un dashboard complet sur la démographie de votre entreprise</h3>
                 <%= image_tag("charts.jpg", :alt => "charts") %>
             </div>
         </div>
     </div>
 </section>
-<section class="sectionTwo">
-    <div>
+<section class="sectionTwo" id="section2">
+    <div class="contentSection">
         <h2 class="title">Vous êtes candidat ?</h2>
-        <div class="infosCandidate">
-            <p>Graphes</p>
-            <p>Infos</p>
+        <div class="infosSecondSection">
+            <div class="charts container">
+                <h3>Graphes</h3>
+                <%= image_tag("charts.jpg", :alt => "charts") %>
+            </div>
+            <div class="infosRecruiter container">
+                <h3>Infos</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut felis mattis, finibus metus vitae, consectetur lectus. In at eleifend augue. Sed rhoncus turpis finibus mauris semper dignissim. Morbi eu volutpat orci. Vestibulum auctor nibh quis sodales sodales. Nullam dignissim nisi ac facilisis blandit. Aliquam blandit auctor tellus, eget elementum enim.</br>
+
+                Suspendisse potenti. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce interdum libero et est feugiat efficitur. Nulla convallis arcu in odio interdum dignissim. In ligula augue, tincidunt vel elit et, sodales porta risus. Nunc eu massa augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget venenatis metus. Praesent posuere nibh dui. Duis nec ligula tincidunt, congue ante et, blandit nunc. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi iaculis mauris suscipit tellus lobortis malesuada. Nullam iaculis rutrum nisl sit amet varius. Maecenas condimentum lacus vitae gravida cursus. Phasellus ipsum purus, tristique ut urna et, placerat faucibus magna.
+
+                </br>Nulla ac quam consectetur, vestibulum magna ut, lacinia metus. Ut vel urna mollis, aliquam enim at, dictum orci. Integer placerat tortor sit amet sagittis fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non metus interdum, aliquet elit non, vulputate velit. Nullam sagittis dolor metus, vitae finibus nunc vestibulum vel. Aenean eu lorem egestas, euismod elit sagittis, bibendum mi. In hac habitasse platea dictumst. In hac habitasse platea dictumst. Praesent vitae leo convallis, aliquet felis eu, ultricies elit.</p>
+            </div>
         </div>
     </div>
 </section>
 <section class="sectionThree">
-    <div>
-        <h2>Notre constat</h2>
+    <div class="contentSection">
+        <h2 class="title">A propos de nous</h2>
+        <div class="profiles">
+            <div class="profile">
+                <%= image_tag("alex.jpeg", :alt => "alexandre cartier", :class => "profile") %>
+                <p>CEO de Same Chances, adore le foot et la cuisine italienne.</p>
+            </div>
+            <div class="profile">
+                <%= image_tag("aude.png", :alt => "aude cervantes", :class => "profile") %>
+                <p>CMO, aime parler de sujets philosophiques et a un attrait particulier pour le plat flageolets/oeufs.</p>
+            </div>
+            <div class="profile">
+                <%= image_tag("alexandra.jpeg", :alt => "alexandra de la gueronnière", :class => "profile") %>
+                <p>CTO, adore débattre et n'a pas peur d'affirmer haut et fort ses convictions, elle aime aussi tous les êtres vivants.</p>
+            </div>
+        </div>
         <p>Infos</p>
     </div>
 </section>

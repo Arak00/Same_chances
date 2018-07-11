@@ -2,6 +2,10 @@ body {
     margin: 0;
 }
 
+.topnav a.active:hover {
+    background-color: #f8ac4e;
+}
+
 .navBar {
     position: fixed;
     top: 0;
