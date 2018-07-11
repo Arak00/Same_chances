@@ -3,7 +3,7 @@
 Rails.application.routes.draw do
   devise_for :recruiters
   devise_for :candidates
-  root to: "home#index"
+  root "home#index"
   get '/signup', to: "home#signup"
   get '/signin', to: "home#signin"
 
