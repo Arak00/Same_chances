@@ -1,5 +1,9 @@
 .title {
     text-align: center;
+    margin: 20px;
+}
+
+.titleb {
     margin-bottom: 100px;
 }
 
@@ -18,6 +22,15 @@
     display: inline-block;
     font-size: 16px;
     border-radius: 5px;
+}
+
+.buttons .buttonHome:hover {
+    background-color: #f8ac4e;
+}
+
+.container {
+    margin: 20px 60px;
+    padding: 30px;
 }
 
 .headerHome {
@@ -45,7 +58,7 @@
     display: flex;
 }
 
-.contentFirstSection {
+.contentTopSection {
     margin: auto;
 }
 
@@ -67,7 +80,7 @@
     display: flex;
 }
 
-.contentSecondSection {
+.contentSection {
     margin: auto;
 }
 
@@ -85,6 +98,21 @@
     display: flex;
 }
 
+.profile {
+    height: 200px;
+    width: auto;
+}
+
+.profiles {
+    display: flex;
+    align-content: center;
+}
+
+.profile {
+    margin: 20px;
+    
+}
+
 .sectionTwo {
     /* Height and width fallback for older browsers. */
     height: 100%;
@@ -98,6 +126,7 @@
 
     /* Remove any browser-default margins. */
     margin: 0;
+    display: flex;
 }
 
 .sectionThree {
@@ -113,4 +142,7 @@
 
     /* Remove any browser-default margins. */
     margin: 0;
+    display: flex;
+    background-color: #66cdaa;
+    color: white;
 }
