@@ -18,6 +18,9 @@ Rails:
 Style/FrozenStringLiteralComment:
   Enabled: false
 
+Layout/EndOfLine:
+ Enabled: false
+ 
 Metrics/BlockLength:
   Exclude:
     - 'spec/**/*.rb'
